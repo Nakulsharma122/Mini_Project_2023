@@ -2,7 +2,94 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}   
+}  
+nav{
+    position: fixed;
+    z-index: 10;
+    top: 0px; 
+    width: 100vw;
+    background-color: white;
+} 
+.navbar-main{
+    display: flex; 
+    align-items: center;  
+    padding: 1vw;
+}
+.nav-logo{
+    display: flex;
+    margin: auto 0.5vw;
+    >img{
+        height: 2vw;
+        width: 2vw;
+    }
+    >h3{
+        font-size: 1.5vw;
+        padding-top: 0.2vw;
+    }
+}
+.nav-team{
+    display: flex;
+    margin: auto 0.5vw;
+    >a{
+        text-decoration: none;
+        color: black;
+        font-size: 1vw;
+        margin-left: 1vw;
+    }
+}
+.dropdown{
+    margin-left: 0.5vw;
+    >a{
+        text-decoration: none;
+        color: black;
+        font-size: 1vw;
+        margin: auto 0.5vw;
+    }
+}
+.nav-searchbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto 0.5vw;
+    >input{
+        width: 40vw;
+        height: 2vw;
+        outline: none;
+        border-radius: 1vw;
+        padding-left: 2vw;
+        font-size: 0.8vw;
+       
+    }
+    >.search-icon{
+        margin: auto 0.5vw;
+        display: flex;
+        padding: 0.2vw;
+        justify-content: center;
+        align-items: center;
+        >svg{
+            height: 1.3vw;
+            width: 1.3vw;
+        }
+        >p{
+            padding-top: 0.5vw;
+            margin-left: 0.5vw;
+            font-size: 1vw;
+        }
+    }
+    .search-icon:hover{
+        border: 0.1vw solid black;
+    }
+}
+.nav-login{
+    margin-left: 1vw;
+    >button{
+        height: 2.2vw;
+        width: 9vw;
+        font-size: 0.8vw;
+    }
+
+}
+
 
 .second-nav{
     height: 30px;
@@ -130,7 +217,6 @@
 /**footer**/
 
 .footer-outer{
-    /**border: 1px solid black;**/
     padding: 4vw;
 }
 .footer-inner{
@@ -149,7 +235,11 @@
     >h2{
         font-size: 2.5vw;
         padding-top: 1vw;
+        text 
     } 
+}
+.footer-icons{
+    margin-left: 1.5vw;
 }
 .footer-icons a{
     margin-right: 2vw;
@@ -172,6 +262,7 @@
 .footer-right h3{
     font-size: 2vw;
     margin-bottom: 2vw;
+    
 }
 .opt-Margin{
     margin-left: 8vw;
