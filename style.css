@@ -14,22 +14,24 @@ nav{
     display: flex; 
     align-items: center;  
     padding: 1vw;
+    height: 4vw;
 }
 .nav-logo{
     display: flex;
-    margin: auto 0.5vw;
+    margin: auto 1vw;
     >img{
         height: 2vw;
         width: 2vw;
     }
     >h3{
         font-size: 1.5vw;
-        padding-top: 0.2vw;
     }
 }
-.nav-team{
+.nav-options{
     display: flex;
-    margin: auto 0.5vw;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto 1vw;
     >a{
         text-decoration: none;
         color: black;
@@ -37,14 +39,22 @@ nav{
         margin-left: 1vw;
     }
 }
+.nav-dropbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .dropdown{
-    margin-left: 0.5vw;
-    >a{
-        text-decoration: none;
-        color: black;
-        font-size: 1vw;
-        margin: auto 0.5vw;
-    }
+    margin-left: 1vw ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dropdown a{
+    text-decoration: none;
+    color: black;
+    font-size: 1vw;
+    margin: 0.5vw auto;
 }
 .nav-searchbox{
     display: flex;
@@ -52,7 +62,7 @@ nav{
     align-items: center;
     margin: auto 0.5vw;
     >input{
-        width: 40vw;
+        width: 45vw;
         height: 2vw;
         outline: none;
         border-radius: 1vw;
@@ -64,6 +74,7 @@ nav{
         margin: auto 0.5vw;
         display: flex;
         padding: 0.2vw;
+        border-radius: 0.5vw;
         justify-content: center;
         align-items: center;
         >svg{
@@ -71,9 +82,9 @@ nav{
             width: 1.3vw;
         }
         >p{
-            padding-top: 0.5vw;
-            margin-left: 0.5vw;
+           
             font-size: 1vw;
+            margin: auto 0.5vw;
         }
     }
     .search-icon:hover{
@@ -81,13 +92,27 @@ nav{
     }
 }
 .nav-login{
-    margin-left: 1vw;
+    margin: 0.5vw auto;
     >button{
-        height: 2.2vw;
-        width: 9vw;
-        font-size: 0.8vw;
+       border-radius: 0.2vw;
+       height: 2vw;
+       width: 5vw;
+       font-size: 1.2vw;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       margin: 0.5vw auto;
     }
-
+}
+.nav-cart{
+    margin: 1vw auto;
+    >svg{
+        height: 1.5vw;
+        width: 1.5vw;
+    }
+    >span{
+        font-size: 1.2vw;
+    }
 }
 
 
