@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
@@ -20,8 +21,8 @@
                     <h3>ShopHunt</h3>
                   </div>
                   <div class="nav-options">
-                    <a href="#">Home</a>
-                    <a href="#">Our Team</a>
+                    <a href="index.html">Home</a>
+                    <a href="team.html">Our Team</a>
                     <a href="#">Latest</a>
                     <div class="nav-dropbox">
                       <div class="dropdown">
@@ -67,14 +68,118 @@
                     </div>
                   </div>
                   <div class="nav-login">
-                    <button type="button" class="">Login & SignUp</button>
+                    <button type="button" class=""><a href="login.html">Login & SignUp</a></button>
                   </div>
-                  <div class="nav-cart">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
-                      <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                    </svg>
-                    <span>cart</span>
+
+                  <div class="nav-cart-main">
+                    <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                      <div class="nav-cart">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+                          <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                        </svg>
+                        <span>cart</span>
+                      </div>
+                    </button>
+
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                      <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasRightLabel">Shopping Cart</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                          </svg>
+                        </button>
+                      </div>
+
+                      <div class="offcanvas-body" style="padding: 0;">
+
+                        <div class="flex h-full flex-col overflow-y-scroll bg-white shadow-xl">
+                          <div class="flex-1 overflow-y-auto px-4 py-6 sm:px-6">
+                            
+              
+                            <div class="mt-8">
+                              <div class="flow-root">
+                                <ul role="list" class="-my-6 divide-y divide-gray-200">
+                                  <li class="flex py-6">
+                                    <div class="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
+                                      <img src="https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg" alt="Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt." class="h-full w-full object-cover object-center">
+                                    </div>
+              
+                                    <div class="ml-4 flex flex-1 flex-col">
+                                      <div>
+                                        <div class="flex justify-between text-base font-medium text-gray-900">
+                                          <h3>
+                                            <a href="#">Throwback Hip Bag</a>
+                                          </h3>
+                                          <p class="ml-4">$90.00</p>
+                                        </div>
+                                        <p class="mt-1 text-sm text-gray-500">Salmon</p>
+                                      </div>
+                                      <div class="flex flex-1 items-end justify-between text-sm">
+                                        <p class="text-gray-500">Qty 1</p>
+              
+                                        <div class="flex">
+                                          <button type="button" class="font-medium text-indigo-600 hover:text-indigo-500">Remove</button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li class="flex py-6">
+                                    <div class="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
+                                      <img src="https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-02.jpg" alt="Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch." class="h-full w-full object-cover object-center">
+                                    </div>
+              
+                                    <div class="ml-4 flex flex-1 flex-col">
+                                      <div>
+                                        <div class="flex justify-between text-base font-medium text-gray-900">
+                                          <h3>
+                                            <a href="#">Medium Stuff Satchel</a>
+                                          </h3>
+                                          <p class="ml-4">$32.00</p>
+                                        </div>
+                                        <p class="mt-1 text-sm text-gray-500">Blue</p>
+                                      </div>
+                                      <div class="flex flex-1 items-end justify-between text-sm">
+                                        <p class="text-gray-500">Qty 1</p>
+              
+                                        <div class="flex">
+                                          <button type="button" class="font-medium text-indigo-600 hover:text-indigo-500">Remove</button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+              
+                                  <!-- More products... -->
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+              
+                          <div class="border-t border-gray-200 px-4 py-6 sm:px-6">
+                            <div class="flex justify-between text-base font-medium text-gray-900">
+                              <p>Subtotal</p>
+                              <p>$262.00</p>
+                            </div>
+                            <p class="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
+                            <div class="mt-6">
+                              <a href="#" class="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700">Checkout</a>
+                            </div>
+                            <div class="mt-6 flex justify-center text-center text-sm text-gray-500">
+                              <p>
+                                or
+                                <button type="button" class="font-medium text-indigo-600 hover:text-indigo-500">
+                                  Continue Shopping
+                                  <span aria-hidden="true"> &rarr;</span>
+                                </button>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
                   </div>
+                
                 </div>
               </nav>
 
@@ -136,7 +241,7 @@
                       <p>See more</p>
                       </div>
                   </div>
-                  <div class="box">
+                  <div class="box" id="myBtn">
                       <div class="box-content">
                           <h2> Electronic Gadgets </h2>
                       <div class="box-img">
@@ -194,53 +299,142 @@
       </div>
     </aside>
 
-    <section>
-        <div class="scrool">
+    <section id="Best_mobile_phone">
+        <div class="my-scrool">
           <div class="heading1"><h2>Best Mobile Phone Deals</h2><a href="#">see all deals</a></div>
-          <div class="scrool-items">
-            <a href="#"><img src="images\mobile.jpg" alt=""></a>
-            <a href="#"><img src="images\mobile.jpg" alt=""></a>
-            <a href="#"><img src="images\mobile.jpg" alt=""></a>
-            <a href="#"><img src="images\mobile.jpg" alt=""></a>
-            <a href="#"><img src="images\mobile.jpg" alt=""></a>
-            <a href="#"><img src="images\mobile.jpg" alt=""></a>
-            <a href="#"><img src="images\mobile.jpg" alt=""></a>
-            <a href="#"><img src="images\mobile.jpg" alt=""></a>
-            <a href="#"><img src="images\mobile.jpg" alt=""></a>
-            <a href="#"><img src="images\mobile.jpg" alt=""></a>
-            <a href="#"><img src="images\mobile.jpg" alt=""></a>
-            <a href="#"><img src="images\mobile.jpg" alt=""></a>
-            <a href="#"><img src="images\mobile.jpg" alt=""></a>
-            <a href="#"><img src="images\mobile.jpg" alt=""></a>
-            <a href="#"><img src="images\mobile.jpg" alt=""></a>
-            <a href="#"><img src="images\mobile.jpg" alt=""></a>
-            <a href="#"><img src="images\mobile.jpg" alt=""></a>
+          <div class="my-scrool-items">
+
+          <a href="#">
+            <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+              <img src="Electronic Gadgets\E-1.jpg" alt="">
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+              <img src="Electronic Gadgets\E-2.jpg" alt="">
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+              <img src="Electronic Gadgets\E-3.jpg" alt="">
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+              <img src="Electronic Gadgets\E-4.jpg" alt="">
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+              <img src="Electronic Gadgets\E-5.jpg" alt="">
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+              <img src="Electronic Gadgets\E-6.jpg" alt="">
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+              <img src="Electronic Gadgets\E-7.jpg" alt="">
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+              <img src="Electronic Gadgets\E-8.jpg" alt="">
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+              <img src="Electronic Gadgets\E-9.jpg" alt="">
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+              <img src="Electronic Gadgets\E-10.jpg" alt="">
+            </div>
+          </a>
+
+
+           
           </div>
         </div>
     </section>
 
-    <section>
-      <div class="scrool">
+    <section id="Fashion">
+      <div class="my-scrool">
         <div class="heading1"><h2>Festive Wear For Women</h2><a href="#">see all deals</a></div>
-        <div class="scrool-items">
+        <div class="my-scrool-items">
           
-          <a href="#"><img src="images\ladies wear.jpg" alt=""></a>
-          <a href="#"><img src="images\ladies wear.jpg" alt=""></a>
-          <a href="#"><img src="images\ladies wear.jpg" alt=""></a>
-          <a href="#"><img src="images\ladies wear.jpg" alt=""></a>
-          <a href="#"><img src="images\ladies wear.jpg" alt=""></a>
-          <a href="#"><img src="images\ladies wear.jpg" alt=""></a>
-          <a href="#"><img src="images\ladies wear.jpg" alt=""></a>
-          <a href="#"><img src="images\ladies wear.jpg" alt=""></a>
-          <a href="#"><img src="images\ladies wear.jpg" alt=""></a>
-          <a href="#"><img src="images\ladies wear.jpg" alt=""></a>
-          <a href="#"><img src="images\ladies wear.jpg" alt=""></a>
-          <a href="#"><img src="images\ladies wear.jpg" alt=""></a>
-          <a href="#"><img src="images\ladies wear.jpg" alt=""></a>
-          <a href="#"><img src="images\ladies wear.jpg" alt=""></a>
-          <a href="#"><img src="images\ladies wear.jpg" alt=""></a>
-          <a href="#"><img src="images\ladies wear.jpg" alt=""></a>
-          <a href="#"><img src="images\ladies wear.jpg" alt=""></a>
+          <a href="#">
+            <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+              <img src="Fashion\F-1.jpg" alt="IMG">
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+              <img src="Fashion\F-2.jpg" alt="IMG">
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+              <img src="Fashion\F-3.jpg" alt="IMG">
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+              <img src="Fashion\F-4.jpg" alt="IMG">
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+              <img src="Fashion\F-5.jpg" alt="IMG">
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+              <img src="Fashion\F-6.jpg" alt="IMG">
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+              <img src="Fashion\F-7.jpg" alt="IMG">
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+              <img src="Fashion\F-8.jpg" alt="IMG">
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+              <img src="Fashion\F-9.jpg" alt="IMG">
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+              <img src="Fashion\F-10.jpg" alt="IMG">
+            </div>
+          </a>
+
           
         </div>
       </div>
@@ -276,6 +470,423 @@
     </div>
   </div>
   </aside>
+
+  <section id="Beauty">
+    <div class="my-scrool">
+      <div class="heading1"><h2>Festive Wear For Women</h2><a href="#">see all deals</a></div>
+      <div class="my-scrool-items">
+        
+        <a href="#">
+          <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+            <img src="Beauty Pics\beauty_1.jpg" alt="IMG">
+          </div>
+        </a>
+
+        <a href="#">
+          <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+            <img src="Beauty Pics\beauty_2.jpg" alt="IMG">
+          </div>
+        </a>
+
+        <a href="#">
+          <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+            <img src="Beauty Pics\beauty_3.jpg" alt="IMG">
+          </div>
+        </a>
+
+        <a href="#">
+          <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+            <img src="Beauty Pics\beauty_4.jpg" alt="IMG">
+          </div>
+        </a>
+
+        <a href="#">
+          <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+            <img src="Beauty Pics\beauty_5.jpg" alt="IMG">
+          </div>
+        </a>
+
+        <a href="#">
+          <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+            <img src="Beauty Pics\beauty_6.jpg" alt="IMG">
+          </div>
+        </a>
+
+        <a href="#">
+          <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+            <img src="Beauty Pics\beauty_7.jpg" alt="IMG">
+          </div>
+        </a>
+
+        <a href="#">
+          <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+            <img src="Beauty Pics\beauty_8.jpg" alt="IMG">
+          </div>
+        </a>
+
+        <a href="#">
+          <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+            <img src="Beauty Pics\beauty_9.jpg" alt="IMG">
+          </div>
+        </a>
+
+        <a href="#">
+          <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+            <img src="Beauty Pics\beauty_10.jpg" alt="IMG">
+          </div>
+        </a>
+   
+      </div>
+    </div>
+</section>
+
+<section id="Clothes">
+  <div class="my-scrool">
+    <div class="heading1"><h2>Festive Wear For Women</h2><a href="#">see all deals</a></div>
+    <div class="my-scrool-items">
+      
+      <a href="#">
+        <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+          <img src="Clothes\C-1.jpg" alt="IMG">
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+          <img src="Clothes\C-2.jpg" alt="IMG">
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+          <img src="Clothes\C-3.jpg" alt="IMG">
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+          <img src="Clothes\C-4.jpg" alt="IMG">
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+          <img src="Clothes\C-5.jpg" alt="IMG">
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+          <img src="Clothes\C-6.jpg" alt="IMG">
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+          <img src="Clothes\C-7.jpg" alt="IMG">
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+          <img src="Clothes\C-8.jpg" alt="IMG">
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+          <img src="Clothes\C-9.jpg" alt="IMG">
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+          <img src="Clothes\C-10.jpg" alt="IMG">
+        </div>
+      </a> 
+
+      
+    </div>
+  </div>
+</section>
+
+<section id="Furniture">
+  <div class="my-scrool">
+    <div class="heading1"><h2>Festive Wear For Women</h2><a href="#">see all deals</a></div>
+    <div class="my-scrool-items">
+      
+      <a href="#">
+        <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+          <img src="Furniture\f-1.jpg" alt="IMG">
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+          <img src="Furniture\f-2.jpg" alt="IMG">
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+          <img src="Furniture\f-3.jpg" alt="IMG">
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+          <img src="Furniture\f-4.jpg" alt="IMG">
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+          <img src="Furniture\f-5.jpg" alt="IMG">
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+          <img src="Furniture\f-6.jpg" alt="IMG">
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+          <img src="Furniture\f-7.jpg" alt="IMG">
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+          <img src="Furniture\f-8.jpg" alt="IMG">
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+          <img src="Furniture\f-9.jpg" alt="IMG">
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+          <img src="Furniture\f-10.jpg" alt="IMG">
+        </div>
+      </a>
+     
+    </div>
+  </div>
+</section>
+
+<section id="Health-care">
+  <div class="my-scrool">
+    <div class="heading1"><h2>Festive Wear For Women</h2><a href="#">see all deals</a></div>
+    <div class="my-scrool-items">
+      
+      <a href="#">
+        <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+          <img src="Health & Personal Care\h&p-1.jpg" alt="IMG">
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+          <img src="Health & Personal Care\h&p-2.jpg" alt="IMG">
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+          <img src="Health & Personal Care\h&p-3.jpg" alt="IMG">
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+          <img src="Health & Personal Care\h&p-4.jpg" alt="IMG">
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+          <img src="Health & Personal Care\h&p-5.jpg" alt="IMG">
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+          <img src="Health & Personal Care\h&p-6.jpg" alt="IMG">
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+          <img src="Health & Personal Care\h&p-7.jpg" alt="IMG">
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+          <img src="Health & Personal Care\h&p-8.jpg" alt="IMG">
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+          <img src="Health & Personal Care\h&p-9.jpg" alt="IMG">
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+          <img src="Health & Personal Care\h&p-10.jpg" alt="IMG">
+        </div>
+      </a>
+  
+    </div>
+  </div>
+</section>
+
+
+<section id="pet-care">
+  <div class="my-scrool">
+    <div class="heading1"><h2>Festive Wear For Women</h2><a href="#">see all deals</a></div>
+    <div class="my-scrool-items">
+      
+      <a href="#">
+        <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+          <img src="Pet Care\pc-1.jpg" alt="IMG">
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+          <img src="Pet Care\pc-2.jpg" alt="IMG">
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+          <img src="Pet Care\pc-3.jpg" alt="IMG">
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+          <img src="Pet Care\pc-4.jpg" alt="IMG">
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+          <img src="Pet Care\pc-5.jpg" alt="IMG">
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+          <img src="Pet Care\pc-6.jpg" alt="IMG">
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+          <img src="Pet Care\pc-7.jpg" alt="IMG">
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+          <img src="Pet Care\pc-8.jpg" alt="IMG">
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+          <img src="Pet Care\pc-9.jpg" alt="IMG">
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+          <img src="Pet Care\pc-10.jpg" alt="IMG">
+        </div>
+      </a>
+ 
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="my-scrool">
+    <div class="heading1"><h2>Festive Wear For Women</h2><a href="#">see all deals</a></div>
+    <div class="my-scrool-items">
+      
+      <a href="#">
+        <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+          <img src="Toys\toy-1.jpg" alt="IMG">
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+          <img src="Toys\toy-2.jpg" alt="IMG">
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+          <img src="Toys\toy-3.jpg" alt="IMG">
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+          <img src="Toys\toy-4.jpg" alt="IMG">
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+          <img src="Toys\toy-5.jpg" alt="IMG">
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+          <img src="Toys\toy-6.jpg" alt="IMG">
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+          <img src="Toys\toy-7.jpg" alt="IMG">
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+          <img src="Toys\toy-8.jpg" alt="IMG">
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+          <img src="Toys\toy-9.jpg" alt="IMG">
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="item-img-scrool" style="height: 13vw; width: 7vw;">
+          <img src="Toys\toy-10.jpg" alt="IMG">
+        </div>
+      </a>
+
+      
+    </div>
+  </div>
+</section>
 
   <hr>
 
@@ -359,5 +970,6 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
 </body>
 </html>

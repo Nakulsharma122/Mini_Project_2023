@@ -23,18 +23,10 @@ nav{
     >img{
         height: 2vw;
         width: 2vw;
-        animation: rotate 1s linear infinte  ;
     }
     >h3{
         font-size: 1.5vw;
-    }
-}
-@keyframes rotate {
-    from{
-        transform: rotate(90deg);
-    }
-    to{
-        transform: rotate(360deg);
+        font-weight: 400;
     }
 }
 .nav-options{
@@ -83,7 +75,7 @@ nav{
         border-radius: 0.2vw;
         padding-left: 2vw;
         font-size: 1vw;
-        border: 0.1px soid black;
+        border: 0.1px soid black !important;
     }
     >.search-icon{
         margin: auto 0.5vw;
@@ -96,8 +88,7 @@ nav{
             height: 1.3vw;
             width: 1.3vw;
         }
-        >p{
-           
+        >p{   
             font-size: 1vw;
             margin: auto 0.5vw;
         }
@@ -115,15 +106,30 @@ nav{
        display: flex;
        justify-content: center;
        align-items: center;
-       color: green;
        background-color: white;
        border: 0.1px solid green;
+       >a{
+        text-decoration: none;
+        color: green;
+       }
     }
 }
 .nav-login button:hover{
     border: 0.1px solid green;
     background-color: lightgreen;
-    color: white;
+    >a{
+        color: white;
+    }
+    
+}
+.nav-cart-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0.5vw;
+    >.btn{
+        padding: 0;
+    }
 }
 .nav-cart{
     margin: 1vw auto;
@@ -215,7 +221,7 @@ nav{
     margin-top: 30vw;
 }
 
-.scrool{
+.my-scrool{
     padding: 1vw;
 }
 .heading1{
@@ -223,25 +229,25 @@ nav{
     >a{
         margin: auto 1vw;
         text-decoration: none;
+        color: blue;
         font-size: 1vw;
     }
-    >h2{
-        
+    >h2{  
         font-size: 2vw;
     }
 }
-.scrool-items{
+.my-scrool-items{
     display: flex;
     flex-wrap: nowrap;
     overflow: scroll;
-    
     >a{
-        margin: 2vw 3vw;
-        >img{
-            width:7vw ;
-            height: 13vw;
-        }
-    }
+        margin: 1vw 3vw;  
+    }  
+}
+.item-img-scrool{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .advertisement{
@@ -266,6 +272,7 @@ nav{
 }
 .footer-left h3{
     font-size: 1vw;
+    margin-top: 0.5vw;
     margin-bottom: 1vw;
 }
 .footer-left img{
@@ -283,6 +290,7 @@ nav{
 }
 .footer-icons{
     margin-left: 1.5vw;
+    display: flex;
 }
 .footer-icons a{
     margin-right: 2vw;
@@ -312,7 +320,7 @@ nav{
 }
 hr{
     width: 90vw;
-    margin: auto;
+    margin: auto !important;
 }
 
 .copyright h4{
