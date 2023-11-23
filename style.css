@@ -126,7 +126,7 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 0.5vw;
+    margin-left: 1vw;
     >.btn{
         padding: 0;
     }
@@ -241,14 +241,18 @@ nav{
     flex-wrap: nowrap;
     overflow: scroll;
     >a{
-        margin: 1vw 3vw;  
+        margin: 2vw 3vw;  
     }  
 }
 .item-img-scrool{
     display: flex;
     justify-content: center;
     align-items: center;
+    >img{
+       object-fit: contain;
+    }
 }
+
 
 .advertisement{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
