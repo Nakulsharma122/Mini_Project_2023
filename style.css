@@ -300,11 +300,12 @@ nav{
     justify-content: center;
     align-items: center;
     >img{
-       object-fit: contain;
+       object-fit: cover;
     }
 }
-
-
+.item-img-scrool img:hover{
+    scale: 1.5;
+}
 .advertisement{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border: 2px solid black ;
