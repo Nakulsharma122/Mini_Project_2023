@@ -234,6 +234,7 @@ nav{
     padding: 0.5vw 0px 0.3vw;
     margin-top: 1vw;
     border-radius: 0.5vw;
+    cursor: pointer;
 }
 .box-img{
     height: 16vw;
