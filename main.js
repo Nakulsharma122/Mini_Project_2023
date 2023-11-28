@@ -61,3 +61,13 @@ function toggle1() {
     var popup = document.getElementById("popup-2");
     popup.classList.toggle("active");
   }
+
+  document.getElementById("E-5").onclick = function(){E5()};
+
+  function E5(){
+    var ul = document.getElementById("list");
+    var li = document.createElement("li");
+    li.appendChild(document.createTextNode("Four"));
+    ul.appendChild(li);
+    alert(hello);
+  }
