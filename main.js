@@ -62,12 +62,30 @@ function toggle1() {
     popup.classList.toggle("active");
   }
 
-  document.getElementById("E-5").onclick = function(){E5()};
-
-  function E5(){
+  function E_5(){
+    const val = document.getElementById('E5Input').value;
+    var Qty= document.getElementById("E5-Quantity");
+    const textNode = document.createTextNode(val);
+    Qty.appendChild(textNode);
     var ul = document.getElementById("list");
-    var li = document.createElement("li");
-    li.appendChild(document.createTextNode("Four"));
+    var li = document.getElementById("E5Cart");
     ul.appendChild(li);
-    alert(hello);
+    li.classList.remove("visibility");
+    alert('your Product is added to shop-cart: ');  
   }
+  
+document.getElementById("removeE5").onclick = function() {RemoveE_5()};
+function RemoveE_5(){  
+    var ul = document.getElementById("list");
+    console.log(ul);
+    var li = document.getElementById("E5Cart");
+    console.log(li);
+    ul.removeChild(li);
+}
+
+function Submitalert(){
+    alert("your order is submitted");
+    RemoveE_5();
+
+}
+
