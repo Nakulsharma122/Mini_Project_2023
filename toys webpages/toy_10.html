@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page </title>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    padding-top: 2px;
+    height: 20px;
+}
+.wrapper{
+    width: 90%;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    padding-top: 5px;
+    margin-top: 5vw;
+}
+.text{
+    flex-basis:  45%;
+}
+.main-images img{
+    object-fit: contain;
+    height: 40vw;
+    width: 40vw;
+    visibility: visible;
+}
+p{
+    margin-bottom: 20px;
+}
+.brand{
+    background-color: #008000;
+    width: fit-content;
+    color: #fff;
+    font-size:  12px;
+    padding: 2px 5px;
+}
+.mg-t{
+    margin-top: 2vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+h2{
+    font-size: 35px;
+    color: #555;
+    margin-bottom: 20px;
+}
+.review{
+    background-color: #008000;
+    display: inline-block;
+    color: #fff;
+    padding: 4px;
+    border-radius : 5px;
+    font-size: 15px;
+}
+.review .fa{
+    color: #fff;
+}
+.price{
+    color: rgb(29,28,28);
+    font-size: 26px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+.price-box{
+    display: flex;
+    align-items: center;
+
+}
+input{
+    width: 30px;
+    border: 1px solid #ccc;
+    font-weight: bold;
+    text-align: center;
+}
+button{
+    width: 140px;
+    color: #fff;
+    font-size: 15px;
+    outline: none;
+    border: 0;
+    border-radius: 5px;
+    background-color: #fe980f;
+    padding : 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+button.fa{
+    margin-right: 10px;
+}
+.buy{
+   background-color: rgb(201,97,57);
+}
+h4{
+    margin-bottom: 0.2vw;
+}
+li{
+    margin-top: 0.5vw;
+    margin-bottom: 0.5vw;
+}
+
+@media only screen and (max-width : 768px){
+    .wrapper{
+        flex-direction: column;
+        height: auto;
+        padding: 10% 0;
+    }
+    .text{
+        padding-top : 50px;
+    }   
+    .product-box{
+        width: 100%;
+    }
+    .main-images{
+        margin-right: 20vw;
+    } 
+    .main-images img{
+        height: 80vw;
+        width: 80vw;
+        visibility: visible;
+    }
+    h2{
+        font-size: 25px;
+    }
+    .mg-t{
+        margin-top: 5vw;
+        padding-left: 5vw;
+        padding-right: 5vw;
+    } 
+}
+    </style> 
+</head>
+<body>
+    
+    <div class="container">
+        <div class="wrapper">
+            <div class="product-box">
+                <div class="main-images">
+                    <img src="toy-10.jpg" id="imagebox"> 
+                </div>
+            </div>
+            <div class="text">
+                <div class="context">
+                    <h2>UNO Card Game</h2>
+                    <div class="review">
+                        <span> Review - (4.6)</span>
+                        <span class="fa fa-star"> </span>
+                    </div>
+                    <div class="price-box">
+                        <p class="price">&#8377; 999</p>
+                        <strike>&#8377; 1200</strike>
+                    </div>
+                    <p>Quantity <input type="text" value="1"></p>
+                    <button>
+                        <span class="fa fa-shopping-cart"></span>
+                        Add to Cart
+                    </button>
+
+                <div class="Description">
+                <ul class="mg-t">               
+                    <li><h4>Brand</h4> Mattel</li>	
+                    <li><h4>Model Name</h4> UNO Card Game</li>
+                    <!-- <li><h4>Network Service Provider</h4>Unlocked for All Carriers</li>	
+                    <li><h4>Operating System</h4>iOS 14</li>	
+                    <li><h4>Cellular Technology</h4>5G</li> -->
+                </ul>
+
+                <ul class="mg-t">
+                    <h4>About this item</h4>
+                    <li>Special action cards deliver game-changing moments as they help you defeat your opponents.</li>
+                    <li>These include Skips, Reverses, Draw Twos, color-changing Wild and Draw Four Wild cards.</li>
+                    <li>You’ll find 25 of each color (red, green, blue, and yellow), plus the eight Wild cards, inside the 108-card deck.</li>
+                    <li>If you can’t make a match, you must draw from the central pile!</li>
+                    <li>Don’t forget to shout “UNO” when you only have one card remaining!</li>
+                    <li>The first player to rid themselves of all the cards in their hand before their opponents wins the game.</li>
+                    <li>UNO is a fun and easy game for all ages and occasions.</li>
+                </ul>
+
+                </div>   
+            </div>           
+        </div>
+    </div>
+    </div>
+   
+</body>
+</html>
