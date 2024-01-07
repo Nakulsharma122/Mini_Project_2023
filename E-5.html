@@ -28,7 +28,7 @@
     flex-basis:  45%;
 }
 .main-images img{
-    object-fit: cover;
+    object-fit: contain;
     height: 40vw;
     width: 40vw;
     visibility: visible;
@@ -144,8 +144,8 @@ li{
     <div class="container">
         <div class="wrapper">
             <div class="product-box">
-                <div class="main-images">
-                    <img src="img.jpg" id="imagebox"> 
+                <div class="main-images" id="imagebox">
+                    <img src="Electronic Gadgets\E-5.jpg" alt=""> 
                 </div>
             </div>
             <div class="text">
@@ -160,10 +160,11 @@ li{
                         <strike>&#8377; 89,900</strike>
                     </div>
                     <p>Quantity <input type="text" value="1"></p>
-                    <button>
+                    <button onclick="E_5()">
                         <span class="fa fa-shopping-cart"></span>
-                        Add to Cart
+                        <span>Add to Cart</span>
                     </button>
+
 
                 <div class="Description">
                 <ul class="mg-t">               
@@ -192,5 +193,6 @@ li{
     </div>
     </div>
    
+    <script src="main.js"></script>
 </body>
 </html>
